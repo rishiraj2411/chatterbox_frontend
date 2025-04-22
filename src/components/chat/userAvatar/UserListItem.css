@@ -1,0 +1,35 @@
+.user-list-item {
+    cursor: pointer;
+    background-color: #E8E8E8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.user-list-item:hover {
+    background-color: #38B2AC;
+    color: white;
+}
+
+.avatar {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    font-size: 12px;
+}

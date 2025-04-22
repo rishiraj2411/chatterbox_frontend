@@ -1,0 +1,79 @@
+.user-list {
+  color: #333;
+}
+
+.user-list .table {
+  padding: 5px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.user-list .table .search {
+  width: 100%;
+  max-width: 300px;
+}
+
+.user-list .table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.user-list .table table thead {
+  border-top: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--light-blue);
+}
+
+.user-list .table table th {
+  border: 1px solid #eee;
+}
+
+.user-list .table table th,
+.user-list .table table td {
+  vertical-align: top;
+  text-align: left;
+  padding: 8px;
+}
+
+.user-list .table table th.icons,
+.user-list .table table td.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-list .table table th.icons > *,
+.user-list .table table td.icons > * {
+  margin-right: 7px;
+  cursor: pointer;
+  vertical-align: middle;
+  align-self: center;
+}
+
+.user-list .table table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.user-list .table table tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.user-list .table table tbody tr:hover {
+  background-color: rgba(121, 136, 149, 0.3);
+}
+
+.sort label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 5px;
+}
+
+.sort select {
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 4px 8px;
+  margin: 0 5px 0 0;
+  border: none;
+  border-bottom: 2px solid #777;
+  outline: none;
+}

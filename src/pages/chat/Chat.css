@@ -1,0 +1,29 @@
+.chat-page {
+  width: 100%;
+}
+
+.chat-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100vh - 7rem - 40px);
+  padding: 10px;
+}
+
+.chat-container > div {
+  display: flex;
+  position: static;
+  overflow: hidden;
+}
+
+.css-1phwuxw {
+  overflow-y: auto !important;
+}
+
+@media (max-width: 786px) {
+  .chat-container {
+  grid-template-columns: 1fr;
+}
+}
