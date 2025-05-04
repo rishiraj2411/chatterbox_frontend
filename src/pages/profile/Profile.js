@@ -114,7 +114,7 @@ const Profile = () => {
       <section>
         <div className="container">
           <PageMenu />
-          <h2>Profile</h2>
+          <h2 className="--text-light">Profile</h2>
 
           <div className="--flex-start profile">
             <Card cardClass={"card"}>

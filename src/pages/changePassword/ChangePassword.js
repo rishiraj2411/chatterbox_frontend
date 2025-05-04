@@ -74,7 +74,7 @@ const ChangePassword = () => {
       <section>
         <div className="container">
           <PageMenu />
-          <h2>Change Password</h2>
+          <h2 className="--text-light">Change Password</h2>
           <div className="--flex-start change-password">
             <Card cardClass={"card"}>
               <form onSubmit={updatePassword}>

@@ -95,6 +95,7 @@ body {
 
 .hero-right img {
   max-width: 90%;
+  max-height: 60vh;
   height: auto;
 }
 

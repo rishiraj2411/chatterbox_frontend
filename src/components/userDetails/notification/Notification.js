@@ -16,10 +16,10 @@ const Notification = () => {
   return (
     <div className="container">
       <div className="alert">
-        <p>
+        <p className="--text-light">
           <b>Message: </b> &nbsp;
         </p>
-        <p>
+        <p className="--text-light">
           To verify your account, check your email for a verification link.
           &nbsp;
         </p>
