@@ -13,8 +13,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 6%;
-  height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 80vh;
   color: #fff;
   animation: fadeIn 1s ease-in;
 }

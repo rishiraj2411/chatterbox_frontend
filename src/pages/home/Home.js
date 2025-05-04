@@ -5,6 +5,7 @@ import loginImg from "../../assets/login.svg"; // Optional, can replace with Lot
 
 const Home = () => {
   return (
+    <>
     <div className="main-hero">
       <div className="hero-left">
         <h1 className="hero-title">Connect Instantly.</h1>
@@ -24,6 +25,7 @@ const Home = () => {
         <img src={loginImg} alt="Chat Illustration" />
       </div>
     </div>
+    </>
   );
 };
 
