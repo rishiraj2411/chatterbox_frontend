@@ -1,57 +1,116 @@
-.hero {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6%;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+  animation: slideInLeft 1.2s ease;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #00f260, #0575e6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #eee;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-glow {
+  background: linear-gradient(to right, #0575e6, #00f260);
+  padding: 0.75rem 2rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00f26080;
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #00f260cc;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #00f260;
+  color: #00f260;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #00f26020;
+  transform: translateY(-3px);
+}
+
+.hero-right {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #eee;
-  min-height: 80vh;
+  animation: slideInRight 1.2s ease;
 }
 
-.hero-text {
-  width: 50%;
+.hero-right img {
+  max-width: 90%;
+  height: auto;
 }
 
-.hero-text > * {
-  color: #333;
-  margin-bottom: 2rem;
+/* Transitions */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.hero-text > h2 span {
-  display: block;
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
-.hero-text .hero-buttons a {
-  color: #fff;
-}
-
-.hero-image {
-  width: 50%;
-  text-align: center;
-}
-
-.hero-image img {
-  width: 80%;
-}
-
-@media screen and (max-width: 600px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-
-  .hero-image {
-    width: 100%;
-  }
-
-  .hero-image img {
-    width: 100%;
-  }
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }

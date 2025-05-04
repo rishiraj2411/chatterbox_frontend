@@ -1,37 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import loginImg from "../../assets/login.svg";
+import loginImg from "../../assets/login.svg"; // Optional, can replace with Lottie
 
 const Home = () => {
   return (
-    <>
-      {/* HERO SECTION */}
-      <section className="container hero">
-        <div className="hero-text">
-          <h2>Ultimate MERN Stack Authentication System</h2>
-          <p>
-            Learn and Master Authentication and Authorization using MERN Stack.
-          </p>
-          <p>
-            Implement User Registration, Login, Password Reset, Social Login,
-            User Permissions, Email Notifications etc.
-          </p>
-          <div className="hero-buttons --flex-start">
-            <button className="--btn --btn-danger">
-              <Link to={"/register"}>Register</Link>
-            </button>
-            <button className="--btn --btn-primary">
-              <Link to={"/login"}>Login</Link>
-            </button>
-          </div>
+    <div className="main-hero">
+      <div className="hero-left">
+        <h1 className="hero-title">Connect Instantly.</h1>
+        <p className="hero-tagline">
+          Fast. Secure. Real-time chat made simple.
+        </p>
+        <p className="hero-description">
+          Join ChatMate — your new favorite place to chat with friends and stay connected. Built with the power of the MERN stack.
+        </p>
+        <div className="hero-actions">
+          <Link to="/register" className="btn-glow">Join Now</Link>
+          <Link to="/login" className="btn-outline">Already have an account?</Link>
         </div>
+      </div>
 
-        <div className="hero-image">
-          <img src={loginImg} alt="Inventory" />
-        </div>
-      </section>
-    </>
+      <div className="hero-right">
+        <img src={loginImg} alt="Chat Illustration" />
+      </div>
+    </div>
   );
 };
 

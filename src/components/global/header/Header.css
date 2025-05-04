@@ -1,5 +1,7 @@
+/* Header.css */
+
 .header {
-  background-color: #030b6b;
+  background: linear-gradient(135deg, #030b6b, #1f2a92);
   height: 7rem;
   display: flex;
   justify-content: center;
@@ -7,7 +9,21 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header nav {
   width: 100%;
   max-width: 1600px;
@@ -16,23 +32,103 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .header nav > .logo {
   color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
+
+.header nav > .logo:hover {
+  transform: scale(1.1);
+  color: #00e0ff;
+}
+
+.header nav > .logo span {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
 .home-links {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.home-links li a {
-  color: #fff;
-}
+
 .home-links > * {
   margin-left: 1rem;
   color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.home-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.home-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00e0ff;
+  transition: 0.3s ease;
+}
+
+.home-links li a:hover::after,
+.home-links li a.active::after {
+  width: 100%;
+}
+
+.home-links li a:hover {
+  color: #00e0ff;
+}
+
+.--btn {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.--btn-primary {
+  background-color: #00e0ff;
+  color: #030b6b;
+}
+
+.--btn-primary:hover {
+  background-color: #00c3dd;
+  transform: scale(1.05);
+}
+
+.--btn-secondary {
+  background-color: transparent;
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+}
+
+.--btn-secondary:hover {
+  background-color: #00e0ff;
+  color: #030b6b;
+  transform: scale(1.05);
+}
+
+.--flex-center {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 0.4rem;
+  animation: fadeIn 0.5s ease-in-out;
 }
