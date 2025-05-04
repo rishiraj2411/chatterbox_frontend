@@ -14,9 +14,9 @@ const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const goHome = () => {
-    navigate("/");
-  };
+  // const goHome = () => {
+  //   navigate("/");
+  // };
 
   const logoutUser = () => {
     dispatch(RESET());
@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className="header">
       <nav>
-        <div className="logo" onClick={goHome}>
+        <div className="logo" >
           <BiLogIn size={35} />
           <span>ChatterBox</span>
         </div>

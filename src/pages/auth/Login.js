@@ -14,6 +14,7 @@ import {
 import { validateEmail } from "../../redux/service/authService";
 import Loader from "../../components/loader/Loader";
 
+
 const initialState = {
   email: "",
   password: "",
@@ -54,7 +55,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isLoggedIn && isSuccess) {
-      navigate("/");
+      navigate("/Chat");
     }
 
     if (isError && twoFactor) {

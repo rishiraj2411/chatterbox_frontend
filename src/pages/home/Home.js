@@ -13,7 +13,7 @@ const Home = () => {
           Fast. Secure. Real-time chat made simple.
         </p>
         <p className="hero-description">
-          Join ChatMate — your new favorite place to chat with friends and stay connected. Built with the power of the MERN stack.
+          Join ChatterBox — your new favorite place to chat with friends and stay connected. Built with the power of the MERN stack.
         </p>
         <div className="hero-actions">
           <Link to="/register" className="btn-glow">Join Now</Link>
